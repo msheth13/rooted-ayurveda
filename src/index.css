@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+
+/* I set the main font and background color here for the whole site */
+
+body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f9f4;
+  color: #2e3d2f;
+}
+
+/* Making nav links look spaced out and neat */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #d2e3c8;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1pz solid #ccc;
+}
+
+.navbar h1 {
+  font-family: 'Courier New', monospace;
+  font-size: 1.8rem;
+  text-transform: lowercase;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #355e3b;
+}
+
+/* Just changing the hover color for links so it's clear when hovering */
+.navbar a:hover {
+  color: #588157;
+}
+
+a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold; 
+  text-decoration: underline dotted; 
+}
+
+/* This is the main image and text area at the top of the homepage */
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 60vh;
+  object-fit:cover;
+  opacity: 0.8;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Intro text section on homepage explaining what Ayurveda is */
+
+.intro-section {
+  background-color: #fdf6ec;
+  padding: 3rem 2rem;
+  text-align: center;
+  /* border-top: 2px solid #c1d9bd; */
+}
+
+.intro-section h2 {
+  font-size: 1.7rem;
+  color: #2f4f2f;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0.5rem auto;
+  color: #3b4d3a;
+}
+
+/* Used a flex layout to stack and wrap cards responsively */
+
+.path-section {
+  background-color: #e8f3e3;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.path-section h2 {
+  font-size: 1.8rem;
+  color: #2e3d2f;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.path-intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #4f665a;
+}
+
+.path-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.path-card {
+  background-color: #eaf2ea;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.path-card h3 {
+  margin-bottom: 0.5rem;
+  color: #355e3b;
+}
+
+.path-card p {
+  color: #2e3d2f;
+  font-size: 1rem;
+}
+
+/* Responsive for larger screens */
+@media (min-width: 768px) {
+  .path-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .path-card {
+    width: 250px;
+  }
+}
+
+.site-footer {
+  background-color: #cddfcb; 
+  color: #2e3d2f;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  font-family: 'Georgia', serif;
+  border-top: 1px solid #b2c3af;
+}
+
+/* This section introduces the Dosha types to the user */
+.dosha-intro-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f5f9f4;
+}
+
+/* Styled heading inside Dosha section */
+
+.dosha-intro-section h2 {
+  font-size: 1.8rem;
+  color: #2e3d2f;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph text in Dosha section with better width */
+
+.dosha-intro-section p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  color: #4b5e4a;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+/* I added this button so users can explore Doshas more easily */
+
+.dosha-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #355e3b;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Adds a hover effect to the Dosha button */
+
+.dosha-button:hover {
+  background-color: #588157;
+}
+
+/* I used this to center everything on the Doshas page and give it a soft background */
+
+.doshas-page {
+  padding: 3rem 1rem;
+  background-color: #fffef7;
+  text-align: center;
+}
+
+/* This is the heading style for the Doshas section */
+
+.doshas-page h2 {
+  font-size: 2rem;
+  color: #2e3d2f;
+  margin-bottom: 1rem;
+}
+
+/* This paragraph introduces the Dosha section and I wanted it centered and clean */
+
+.dosha-intro-text {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  color: #4a5c4a;
+}
+
+/* I used flexbox here to lay out the Dosha cards responsively */
+
+.dosha-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Each Dosha card has a light background and soft shadow for a clean feel */
+
+.dosha-card {
+  width: 260px;
+  padding: 1.5rem;
+  background-color: #f1f5eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* Styled the Dosha name headings to make them more visible */
+
+.dosha-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* I added these color-coded borders to help tell the doshas apart visually */
+
+.vata { border-left: 5px solid #7da0ca; }
+.pitta { border-left: 5px solid #e57373; }
+.kapha { border-left: 5px solid #81c784; }
+
+
+/* I created this logo style to give the site a soft, handmade touch */
+
+.logo {
+  font-family: 'Fondamento', cursive;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #2c4b3d;
+  letter-spacing: 0.5px;
+}
+
+/* Main layout for the Recipes page with background and padding */
+
+.recipes-page {
+  padding: 2rem 1.5rem;
+  background-color: #f5f9f4;
+  color: #2e3d2f;
+}
+
+/* This is the heading for the Recipes page */
+
+.recipes-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* This box introduces the recipes and gives the user some quick info */
+
+.recipes-intro {
+  background-color: #e8f3e4;
+  padding: 1.5rem;
+  border-left: 4px solid #88a98f;
+  margin-bottom: 2.5rem;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+/* Individual recipe card style */
+
+.recipe-cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+/* Responsiveness */
+@media screen and (min-width: 768px) {
+  .recipe-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .recipe-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.recipe-card {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Add hover effects to recipe cards */
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Image inside recipe cards */
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Recipe title */
+
+.recipe-card h3 {
+  margin-bottom: 0.5rem;
+  color: #2e3d2f;
+  font-size: 1.25rem;
+}
+
+/* Recipe paragraph */
+
+.recipe-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* I used this to center the recipe modal popup and give it a dark background */
+
+.recipe-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* This styles the content inside the modal so it stands out */
+
+.modal-content {
+  background-color: #cad0c4;
+  color: #2e3d2f;
+  padding: 2rem;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 80vh;
+  position: relative;
+}
+
+/* This is the X button that closes the modal */
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Setting the layout and colors for the self-care page */
+
+.selfcare-page {
+  padding: 2rem;
+  background-color: #f6f9f4;
+  color: #2e3d2f;
+}
+
+/* This image sits on top of the self-care page as a hero image */
+
+.selfcare-hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  max-height: 500px;
+}
+
+/* Intro paragraph section under the self-care hero image */
+
+.selfcare-intro {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* I made this a grid so self-care cards line up nice and responsive */
+
+.selfcare-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Each card gives a self-care tip with shadow and padding */
+
+.selfcare-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header inside each self-care card */
+
+.selfcare-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Paragraph inside each self-care card */
+
+.selfcare-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Main wrapper for the dashboard content with rounded background */
+
+.dashboard-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f6fdf6;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+/* Displays the date at the top of the dashboard */
+
+.dashboard-date {
+  text-align: center;
+  color: #5b7553;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Dashboard title */
+
+.dashboard-page h2 {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+/* Subtitle right under dashboard title */
+
+.dashboard-sub {
+  text-align: center;
+  font-style: italic;
+  color: #6b7a63;
+  margin-bottom: 1.5rem;
+}
+
+/* Lays out the dashboard in two columns that wrap on small screens */
+
+.dashboard-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Left and right sections of dashboard with fallback min-width */
+
+.dashboard-left,
+.dashboard-right {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+/* Right side is centered and padded */
+
+.dashboard-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Container for stacking dashboard cards vertically */
+
+.dashboard-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Styles each individual card with a background and shadow */
+
+.dashboard-card {
+  background-color: #eaf6e9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Dashboard card titles */
+
+.dashboard-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #2d4c2e;
+}
+
+/* This is the inspirational quote box with a special border */
+
+.dashboard-quote {
+  font-style: italic;
+  color: #4d4d4d;
+  background-color: #fffdf5;
+  border-left: 4px solid #d9c87c;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
+}
+
+/* Label above the textarea input */
+
+.dashboard-note h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #355e3b;
+}
+
+/* This textarea lets users write a reflection */
+
+.dashboard-note textarea {
+  width: 100%;
+  height: 120px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  resize: none;
+  background-color: #f8fdf5;
+}
+
+/* This is the main section for the "Why Rooted" page with padding and box shadow */
+.why-rooted-page {
+  max-width: 900px;
+  margin: 3rem auto;
+  background-color: #f4f6f1;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Big header on the why-rooted page aligned to the right */
+
+.why-rooted-page h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: right;
+  color: #2e3d2f;
+}
+
+/* All paragraphs in the "Why Rooted" section are spaced and readable */
+
+.why-rooted-page p {
+  line-height: 1.9;
+  margin-bottom: 1.4rem;
+  font-size: 1.05rem;
+}
+
+/* Quote block on the page with a left border for emphasis */
+
+.why-rooted-page blockquote {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid #88b04b;
+  font-style: italic;
+  color: #3b5234;
+}
+
+/* Layout container with image and content side-by-side */
+
+.whyrooted-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 3rem auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Image section of layout that fits nicely and is styled clean */
+
+.whyrooted-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e1e9dc;
+}
+
+/* Container for the image on the left side */
+
+.whyrooted-image {
+  flex: 1.1;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Text content side of the layout with padding and background */
+
+.whyrooted-content {
+  flex: 1.8;
+  padding: 3rem;
+  background-color: #e2dfd3;
+  min-height: 400px;
+}
+
+/* Header for the content block */
+
+.whyrooted-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2e3d2f;
+}
+
+/* Paragraphs with spacing and nice line height */
+
+.whyrooted-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+/* Emphasized quote area in the content */
+
+.whyrooted-quote {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid #6d8c5f;
+  font-style: italic;
+  color: #3b5234;
+}
+
+/* A centered vertical section for quotes or spotlight content */
+
+.whyrooted-container-vertical {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f0f5ec;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Image inside the vertical layout, centered and rounded */
+
+.whyrooted-img-centered {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+}
+
+/* Text box content aligned left inside the centered layout */
+
+.whyrooted-textbox {
+  text-align: left;
+  max-width: 750px;
+  margin: 0 auto;
+  color: #2e3d2f;
+}
+
+/* Another quote area using a different color and margin */
+
+.whyrooted-quote {
+  border-left: 4px solid #7da97f;
+  padding-left: 1rem;
+  font-style: italic;
+  margin-top: 1.5rem;
+  color: #5d6e5d;
+}
+
+/* A divider bar for visual separation between sections */
+
+.whyrooted-divider {
+  width: 80px;              
+  height: 4px;              
+  background-color: #5c735f;  
+  margin: 2rem auto;        
+  border-radius: 4px;       
+  opacity: 0.9;             
+}
+
+.path-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.path-card {
+  background-color: #f6f8f3;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.path-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background-color: #eaf4e2;
+  cursor: pointer;
+}
+
+.path-card:hover h3 {
+  color: #2b5b2b;
+  transform: scale(1.05);
+}
+
+/* Responsive Design: Desktop breakpoint */
+@media (min-width: 1024px) {
+  .hero-text {
+    max-width: 60%;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .intro-section p,
+  .path-intro,
+  .dosha-intro-section p {
+    font-size: 1.2rem;
+  }
+
+  .dashboard-note textarea {
+    height: 160px;
+  }
+
+  .recipe-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+
+/* 
+Responsive Design:
+Added this breakpoint for smartphones
+*/
+
+@media (max-width: 640px) {
+  .hero-text h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .path-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .recipe-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .site-footer p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .dosha-card {
+    padding: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
