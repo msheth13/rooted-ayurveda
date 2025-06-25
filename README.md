@@ -13,7 +13,6 @@ This site was built as my final project for **IT 338 - Web Development**, using 
 - 🔄 Dynamic content using `useState`
 - 🚀 Navigation with React Router
 - 🎨 Minimal, earthy design for a calming experience
-- 📱 Fully responsive layout with Tailwind CSS
 
 ---
 
